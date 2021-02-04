@@ -14,7 +14,7 @@ def morsify():
     string = input('What would you like to morsify?\n')
     new_string = []
     for word in string.lower().split():
-        word = ' '.join([to_morse[letter] for letter in word])
+        word = ' '.join([to_morse[letter] for letter in word if letter in letters])
         new_string.append(word)
     print(' / '.join(new_string))
     cont()
